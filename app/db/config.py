@@ -17,22 +17,23 @@
 
 class CreatureTable:
 
-    NAME = "creatures"
+    NAME = "todo_list"
 
     SCHEMA = """
-        CREATE TABLE creatures (
-            id      INTEGER PRIMARY KEY AUTOINCREMENT,
-            species TEXT NOT NULL,
-            name    TEXT NOT NULL
+        CREATE TABLE todo_list (
+            id       INTEGER PRIMARY KEY AUTOINCREMENT,
+            name     TEXT NOT NULL,
+            priority INTEGER NOT NULL,
+            complete INTEGER NOT NULL
         )
     """
 
     SEED_DATA = """
-        INSERT INTO creatures (species, name)
+        INSERT INTO todo_list (id, name, priority, complete)
         VALUES
-            ("Dragon",  "Pippa"),
-            ("Unicorn", "Barry"),
-            ("Vampire", "Helen")
+            (1, "Water the plant.", 3, 0),
+            (2, "Vaccum up stairs", 3, 0),
+            (3, "Do the dishes.", 3, 0)
     """
 
 # Add more table classes here...

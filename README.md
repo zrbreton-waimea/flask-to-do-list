@@ -1,5 +1,7 @@
 # Flask Project Template
 
+Here is my colour pallete https://www.realtimecolors.com/?colors=f1eeda-0d0c04-e6dc92-928317-e9d01a&fonts=Inter-Inter
+
 This is a starter for a [Flask web app](https://flask.palletsprojects.com/), built using [Python](https://www.python.org/), that using a [SQLite database](https://sqlite.org/), and [Jinja2 templates](https://jinja.palletsprojects.com/templates/).
 
 See the [docs folder](docs) for a quick-start and guides to usage. In particular:

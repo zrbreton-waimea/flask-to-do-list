@@ -4,14 +4,14 @@
 ===========================================================*/
 
 :root {
-    --text-col:         #244;
+    --text-col:         #f1eeda;
 
-    --back-col:         #dff;
-    --back-col-dark:    #bdd;
+    --back-col:         #0d0c04;
+    --primary:          #e6dc92;
 
-    --border-col:       #355;
+    --secondary-col:    #928317;
 
-    --accent-col:       #e43;
+    --accent-col:       #e9d01a;
 }
 
 
@@ -50,18 +50,15 @@ body > header {
         height: 2rem;
     }
 
+    .logo:hover {
+        rotate: -10deg;
+        scale: 1.2;
+
+    }
+
     h1 {
         font-size: 1.5rem;
         flex: 1;
-    }
-
-    nav {
-        display: flex;
-        gap: 1rem;
-
-        a {
-            color: var(--accent-col);
-        }
     }
 }
 
@@ -82,9 +79,9 @@ main > h2 {
 }
 
 
-/* Creature List --------------------------------------------------*/
+/* To-do List --------------------------------------------------*/
 
-#creatures {
+#todo-list {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
@@ -100,12 +97,12 @@ main > h2 {
     .creature {
         padding: 1rem;
 
-        background-color: var(--back-col-dark);
-        border: 2px solid var(--border-col);
+        background-color: var(--primary);
+        border: 2px solid var(--secondary-col);
         border-radius: 0.5rem;
 
         h3 {
-            color: var(--accent-col);
+            color: var(--text-col);
         }
     }
 }

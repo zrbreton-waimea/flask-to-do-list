@@ -7,20 +7,20 @@
 
 {% block content %}
 
-    <h2>List of Creatures</h2>
+    <h2>To-do list!</h2>
 
-    <section id="creatures">
+    <section id="todo-list">
 
-        {% for creature in creatures %}
+        {% for item in list %}
 
             <div class="creature">
-                <h3>{{ creature.name }}</h3>
-                <p>Species: <strong>{{ creature.species }}</strong></p>
+                <h3>{{ name }}</h3>
+                
             </div>
 
         {% else %}
 
-            <p>No Creatures!</p>
+            <p>There is nothing to do! Sit back and relax: <a href="https://www.netflix.com"> Netflix</a></p>
 
         {% endfor %}
 

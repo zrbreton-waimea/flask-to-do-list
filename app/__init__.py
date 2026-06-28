@@ -25,23 +25,24 @@ app = Flask(__name__)
 #-----------------------------------------------------------
 @app.get("/")
 def show_welcome():
-    return render_template("pages/welcome.jinja")
+    return render_template("pages/todo-list.jinja")
 
 
 #-----------------------------------------------------------
-# Creature list page - Show all the creatures
+# To-do list page
 #-----------------------------------------------------------
-@app.get("/creatures")
-def show_all_creatures():
+@app.get("/todo-list")
+def show_unfinished_items():
     with connect_db() as db:
         sql = """
-            SELECT id, species, name
-            FROM creatures
+            SELECT id, name, priority, complete
+            FROM todo_list
+            WHERE complete = 0
         """
         params = ()
-        creatures = db.execute(sql, params).fetchall()
+        item = db.execute(sql, params).fetchall()
 
-        return render_template("pages/creature_list.jinja", creatures=creatures)
+        return render_template("pages/todo-list.jinja", item=item)
 
 
 #-----------------------------------------------------------
